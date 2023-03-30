@@ -1,4 +1,24 @@
+
 import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const Myapp());
+}
+class Myapp extends StatelessWidget {
+  const Myapp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,//去掉debug图标
+      title: 'FlutterDemo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue
+      ),
+      home: const HomePage(),
+    );
+  }
+}
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,64 +27,47 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixin  {
+   late TabController _tabController;
   @override
   void initState(){
     super.initState();
     _tabController = TabController(length: 9, vsync: this);
-    //监听tab的索引值
-    _tabController.addListener(() {
-      // print(_tabController.index);//打印两次
-      if(_tabController.animation!.value==_tabController.index){
-        print(_tabController.index);
-      }
-    });
   }
-
-  //销毁事件
-  @override
-  void dispose(){
-    super.dispose();
-    _tabController.dispose();
-
-  }
+  List<String> list = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(40),//可以配置appBar的高度
-        child: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.5,
-          title: SizedBox(
-            height: 30,
-            child: TabBar(
-                controller: _tabController,
-                indicatorColor: Colors.red,
-                indicatorSize: TabBarIndicatorSize.label,
-                isScrollable: true,
-                labelColor: Colors.red,
-                unselectedLabelColor: Colors.black,
-                onTap: (index){
-                  print(index);//只能监听点击事件,不能监听滑动事件
-                },
-                labelStyle: const TextStyle(
-                  fontSize: 16
-                ),
-                tabs: const [
-                  Tab(child: Text("关注"),),
-                  Tab(child: Text("热门"),),
-                  Tab(child: Text("视频"),),
-                  Tab(child: Text("关注"),),
-                  Tab(child: Text("热门"),),
-                  Tab(child: Text("视频"),),
-                  Tab(child: Text("关注"),),
-                  Tab(child: Text("热门"),),
-                  Tab(child: Text("视频"),),
-                ]),
-          )
+      appBar: AppBar(
+        leading: IconButton(
+          icon:const Icon(Icons.menu ),
+          onPressed: (){},
         ),
+          backgroundColor: Colors.red,
+          actions: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.abc)),
+          ],
+          title:const Text('FlutterApp'),
+          bottom:TabBar(
+            isScrollable: true,
+            controller: _tabController,
+            indicatorColor: Colors.white,
+            indicatorPadding: const EdgeInsets.all(5),
+            indicatorSize: TabBarIndicatorSize.label,
+            labelColor: Colors.yellow,
+            unselectedLabelColor: Colors.white,
+            tabs: const [
+            Tab(child: Text("关注"),),
+            Tab(child: Text("热门"),),
+            Tab(child: Text("视频"),),
+              Tab(child: Text("关注"),),
+              Tab(child: Text("热门"),),
+              Tab(child: Text("视频"),),
+              Tab(child: Text("关注"),),
+              Tab(child: Text("热门"),),
+              Tab(child: Text("视频"),),
+          ]),
       ),
       body: TabBarView(
         controller: _tabController,
