@@ -27,13 +27,6 @@ class _CategoryPageState extends State<CategoryPage> {
           ElevatedButton(onPressed: (){
             Navigator.of(context).push(
                 MaterialPageRoute(builder: (BuildContext context){
-                  return const FormPage();
-                })
-            );
-          }, child: const Text('跳转到表单页面')),
-          ElevatedButton(onPressed: (){
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (BuildContext context){
                   return const NewsPage(title: "我是标题",aid:12);
                 })
             );

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import './pages/tabs.dart';
+import './routers/routers.dart';
 void main(){
-  runApp(const Myapp());
+  runApp( const Myapp());
 }
 
 
 class Myapp extends StatelessWidget {
-  const Myapp({Key? key}) : super(key: key);
-
+   const Myapp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +14,9 @@ class Myapp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue
         ),
-        home: const Tabs()
+        // home: const Tabs()
+      initialRoute: "/",
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }
