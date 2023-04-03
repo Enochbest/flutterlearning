@@ -31,6 +31,9 @@ class _CategoryPageState extends State<CategoryPage> {
                 })
             );
           }, child: const Text('跳转到新闻页面')),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/pageview");
+          }, child: const Text('pageview页面')),
 
         ],
       ),

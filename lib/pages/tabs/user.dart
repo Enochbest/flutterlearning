@@ -10,8 +10,20 @@ class User extends StatefulWidget {
 class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('用户!')
+    return  Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/login");
+          }, child: const Text('登录')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/reg-first");
+          }, child: const Text('注册')),
+          const SizedBox(height: 40,),
+        ],
+      )
     );
   }
 }
