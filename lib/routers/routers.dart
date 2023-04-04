@@ -11,6 +11,10 @@ import '../pages/user/register_second.dart';
 import '../pages/user/register_third.dart';
 import '../pages/dialog.dart';
 import '../pages/pageview.dart';
+import '../pages/pageviewbuilder.dart';
+import '../pages/pageviewfullpage.dart';
+import '../pages/pageviewswiper.dart';
+import '../pages/autopageview.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -23,6 +27,10 @@ import '../pages/pageview.dart';
   "/reg-third":(contxt)=>const RegThirdPage(),
   "/dialog":(contxt)=>const DialogPage(),
   "/pageview":(contxt)=>const PageViewPage(),
+  "/pageviewbuilder":(contxt)=>const PageViewBuilderPage(),
+  "/pageviewfullpage":(contxt)=>const PageViewFullPage(),
+  "/pageviewswiper":(contxt)=>const PageViewSwiper(),
+  "/autopageview":(contxt)=>const AutoPageViewPage(),
 };
 
  var onGenerateRoute=(RouteSettings settings){

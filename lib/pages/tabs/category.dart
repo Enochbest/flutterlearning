@@ -34,7 +34,23 @@ class _CategoryPageState extends State<CategoryPage> {
           ElevatedButton(onPressed: (){
             Navigator.pushNamed(context, "/pageview");
           }, child: const Text('pageview页面')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/pageviewbuilder");
+          }, child: const Text('pageviewbuilder')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/pageviewfullpage");
+          }, child: const Text('pageviewfullpage')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/pageviewswiper");
+          }, child: const Text('pageviewswiper')),
 
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/autopageview");
+          }, child: const Text('自动轮播图')),
         ],
       ),
     );
