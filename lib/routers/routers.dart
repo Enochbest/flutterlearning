@@ -15,6 +15,10 @@ import '../pages/pageviewbuilder.dart';
 import '../pages/pageviewfullpage.dart';
 import '../pages/pageviewswiper.dart';
 import '../pages/autopageview.dart';
+import '../pages/pageviewkeepalive.dart';
+import '../pages/keylearningpage.dart';
+import '../pages/childwidgetstate.dart';
+import '../pages/antmitedlist.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -31,6 +35,10 @@ import '../pages/autopageview.dart';
   "/pageviewfullpage":(contxt)=>const PageViewFullPage(),
   "/pageviewswiper":(contxt)=>const PageViewSwiper(),
   "/autopageview":(contxt)=>const AutoPageViewPage(),
+  "/pageviewkeepalive":(contxt)=>const PageViewKeepAlive(),
+  "/keylearningpage":(contxt)=>const KeyLearningPage(),
+  "/childwidgetstate":(contxt)=>const ChildPageState(),
+  "/antmitedlist":(contxt)=>const AntmitedList(),
 };
 
  var onGenerateRoute=(RouteSettings settings){

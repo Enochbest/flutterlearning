@@ -99,7 +99,7 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "首页"),
           BottomNavigationBarItem(icon: Icon(Icons.category),label: "分类"),
           BottomNavigationBarItem(icon: Icon(Icons.message),label: "消息"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings),label: "设置"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings),label: "动画"),
           BottomNavigationBarItem(icon: Icon(Icons.people),label: "用户"),
         ],
       ),

@@ -10,8 +10,15 @@ class SettingPage extends StatefulWidget {
 class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('我是设置页面'),
+    return  Center(
+      child: ListView(
+        children: [
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/antmitedlist");
+          }, child: const Text('动态列表')),
+        ],
+      ),
     );
   }
 }

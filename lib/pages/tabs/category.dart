@@ -14,7 +14,7 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return  Center(
-      child: Column(
+      child: ListView(
         children: [
           ElevatedButton(onPressed: (){
             Navigator.of(context).push(
@@ -51,7 +51,20 @@ class _CategoryPageState extends State<CategoryPage> {
           ElevatedButton(onPressed: (){
             Navigator.pushNamed(context, "/autopageview");
           }, child: const Text('自动轮播图')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/pageviewkeepalive");
+          }, child: const Text('页面缓存组件使用')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/keylearningpage");
+          }, child: const Text('Widget组件的作用')),
+          const SizedBox(height: 40,),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/childwidgetstate");
+          }, child: const Text('子组件的状态获取')),
         ],
+
       ),
     );
   }
