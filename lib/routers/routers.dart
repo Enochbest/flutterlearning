@@ -19,6 +19,10 @@ import '../pages/pageviewkeepalive.dart';
 import '../pages/keylearningpage.dart';
 import '../pages/childwidgetstate.dart';
 import '../pages/antmitedlist.dart';
+import '../pages/yinshi_animation.dart';
+import '../pages/MyDrawer.dart';
+import '../pages/xianshi_animation.dart';
+import '../pages/jiaocuo_animation.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -39,6 +43,10 @@ import '../pages/antmitedlist.dart';
   "/keylearningpage":(contxt)=>const KeyLearningPage(),
   "/childwidgetstate":(contxt)=>const ChildPageState(),
   "/antmitedlist":(contxt)=>const AntmitedList(),
+  "/yinshi_animation":(contxt)=>const YinshiAnimation(),
+  "/MyDrawer":(contxt)=>const MyDrawerPlus(),
+  "/xianshi_animation":(contxt)=>const XianshiAnimation(),
+  "/jiaocuo_animation":(contxt)=>const JiaocuoAnimation(),
 };
 
  var onGenerateRoute=(RouteSettings settings){
