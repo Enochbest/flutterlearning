@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/pages/hero.dart';
 import 'package:flutter_learning/pages/user/register_third.dart';
 
 import '../pages/tabs.dart';
@@ -23,6 +24,10 @@ import '../pages/yinshi_animation.dart';
 import '../pages/MyDrawer.dart';
 import '../pages/xianshi_animation.dart';
 import '../pages/jiaocuo_animation.dart';
+import '../pages/heropage.dart';
+import '../pages/hero.dart';
+import '../pages/form/textfied.dart';
+import '../pages/form/login.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -47,6 +52,10 @@ import '../pages/jiaocuo_animation.dart';
   "/MyDrawer":(contxt)=>const MyDrawerPlus(),
   "/xianshi_animation":(contxt)=>const XianshiAnimation(),
   "/jiaocuo_animation":(contxt)=>const JiaocuoAnimation(),
+  "/heropage":(contxt)=>const HeroPage(),
+  "/hero":(contxt,{arguments})=> HeroAnimationPage(arguments:arguments),
+  "/textfied":(contxt)=> const TextFieldPage(),
+  "/mylogin":(contxt)=> const MyLoginPage(),
 };
 
  var onGenerateRoute=(RouteSettings settings){

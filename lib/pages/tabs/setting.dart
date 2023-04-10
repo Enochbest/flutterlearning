@@ -32,6 +32,10 @@ class _SettingPageState extends State<SettingPage> {
           ElevatedButton(onPressed: (){
             Navigator.pushNamed(context, "/jiaocuo_animation");
           }, child: const Text('交错式动画')),
+
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context, "/heropage");
+          }, child: const Text('Hero动画页面')),
         ],
       ),
     );

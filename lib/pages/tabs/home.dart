@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   fontSize: 16
                 ),
                 tabs: const [
-                  Tab(child: Text("关注"),),
+                  Tab(child: Text("表单"),),
                   Tab(child: Text("热门"),),
                   Tab(child: Text("视频"),),
                   Tab(child: Text("关注"),),
@@ -70,10 +70,23 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         controller: _tabController,
         children: [
           ListView(
-            children: const [
-              ListTile(
-                title: Text('我是关注列表'),
-              )
+            children: [
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/textfied");
+                  },
+                  child: const Text('TextField组件'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/mylogin");
+                  },
+                  child: const Text('登录演示组件'),
+                ),
+              ),
             ],
           ),
           ListView(
