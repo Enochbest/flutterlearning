@@ -28,6 +28,15 @@ import '../pages/heropage.dart';
 import '../pages/hero.dart';
 import '../pages/form/textfied.dart';
 import '../pages/form/login.dart';
+import '../pages/form/radio.dart';
+import '../pages/form/checkbox.dart';
+import '../pages/form/formcase.dart';
+import '../pages/async/progress.dart';
+import '../pages/async/futurepage.dart';
+import '../pages/async/futurebuilder.dart';
+import '../pages/async/streampage.dart';
+import '../pages/async/streambuilderpage.dart';
+import '../pages/async/streamcontroller.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -56,6 +65,14 @@ import '../pages/form/login.dart';
   "/hero":(contxt,{arguments})=> HeroAnimationPage(arguments:arguments),
   "/textfied":(contxt)=> const TextFieldPage(),
   "/mylogin":(contxt)=> const MyLoginPage(),
+  "/radio":(contxt)=> const RadioPage(),
+  "/formcase":(contxt)=> const FormPageCase(),
+  "/progress":(contxt)=> const ProgressPage(),
+  "/futurepage":(contxt)=> const FuturePage(),
+  "/futurebuilder":(contxt)=> const FutureBuilderPage(),
+  "/streampage":(contxt)=> const StreamPage(),
+  "/streambuilderpage":(contxt)=> const StreamBuilderPage(),
+  "/streamcontroller":(contxt)=> const StreamControllerPage(),
 };
 
  var onGenerateRoute=(RouteSettings settings){

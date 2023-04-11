@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 ),
                 tabs: const [
                   Tab(child: Text("表单"),),
-                  Tab(child: Text("热门"),),
+                  Tab(child: Text("异步"),),
                   Tab(child: Text("视频"),),
                   Tab(child: Text("关注"),),
                   Tab(child: Text("热门"),),
@@ -87,13 +87,84 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   child: const Text('登录演示组件'),
                 ),
               ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/radio");
+                  },
+                  child: const Text('Radio组件'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/checkbox");
+                  },
+                  child: const Text('Checkbox组件'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/formcase");
+                  },
+                  child: const Text('Form案例'),
+                ),
+              ),
             ],
           ),
           ListView(
-            children: const [
-              ListTile(
-                title: Text('我是热门列表'),
-              )
+            children:  [
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/progress");
+                  },
+                  child: const Text('Progress案例'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/futurepage");
+                  },
+                  child: const Text('Future'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/futurebuilder");
+                  },
+                  child: const Text('FutureBuilderPage'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/streampage");
+                  },
+                  child: const Text('StreampagePage'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/streambuilderpage");
+                  },
+                  child: const Text('streambuilderpage'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/streamcontroller");
+                  },
+                  child: const Text('StreamControllerPage'),
+                ),
+              ),
+
+
             ],
           ),
           ListView(
