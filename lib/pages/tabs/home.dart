@@ -163,6 +163,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   child: const Text('StreamControllerPage'),
                 ),
               ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/streamgame");
+                  },
+                  child: const Text('Stream打字游戏'),
+                ),
+              ),
 
 
             ],

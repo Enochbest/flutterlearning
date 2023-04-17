@@ -37,6 +37,7 @@ import '../pages/async/futurebuilder.dart';
 import '../pages/async/streampage.dart';
 import '../pages/async/streambuilderpage.dart';
 import '../pages/async/streamcontroller.dart';
+import '../pages/async/streamgame.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -73,6 +74,7 @@ import '../pages/async/streamcontroller.dart';
   "/streampage":(contxt)=> const StreamPage(),
   "/streambuilderpage":(contxt)=> const StreamBuilderPage(),
   "/streamcontroller":(contxt)=> const StreamControllerPage(),
+  "/streamgame":(contxt)=> const StreamGamePage(),
 };
 
  var onGenerateRoute=(RouteSettings settings){
