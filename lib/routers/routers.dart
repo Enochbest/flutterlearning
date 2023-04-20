@@ -38,6 +38,9 @@ import '../pages/async/streampage.dart';
 import '../pages/async/streambuilderpage.dart';
 import '../pages/async/streamcontroller.dart';
 import '../pages/async/streamgame.dart';
+import '../pages/time_picker.dart';
+import '../pages/dio_request.dart';
+import '../pages/dio_future.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -75,6 +78,9 @@ import '../pages/async/streamgame.dart';
   "/streambuilderpage":(contxt)=> const StreamBuilderPage(),
   "/streamcontroller":(contxt)=> const StreamControllerPage(),
   "/streamgame":(contxt)=> const StreamGamePage(),
+  "/timepicker":(contxt)=> const TimePickerPage(),
+  "/diorequest":(contxt)=> const DioRequestPage(),
+  "/diofuture":(contxt)=> const DioFuturePage(),
 };
 
  var onGenerateRoute=(RouteSettings settings){

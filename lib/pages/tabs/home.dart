@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 tabs: const [
                   Tab(child: Text("表单"),),
                   Tab(child: Text("异步"),),
-                  Tab(child: Text("视频"),),
-                  Tab(child: Text("关注"),),
+                  Tab(child: Text("时间"),),
+                  Tab(child: Text("请求"),),
                   Tab(child: Text("热门"),),
                   Tab(child: Text("视频"),),
                   Tab(child: Text("关注"),),
@@ -176,17 +176,35 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ],
           ),
           ListView(
-            children: const [
-              ListTile(
-                title: Text('我是视频列表'),
-              )
+            children:  [
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/timepicker");
+                  },
+                  child: const Text('时间'),
+                ),
+              ),
             ],
           ),
           ListView(
-            children: const [
-              ListTile(
-                title: Text('我是关注列表'),
-              )
+            children:  [
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/diorequest");
+                  },
+                  child: const Text('dio请求'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/diofuture");
+                  },
+                  child: const Text('dioFuture请求分类数据'),
+                ),
+              ),
             ],
           ),
           ListView(
