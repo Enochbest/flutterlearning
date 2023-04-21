@@ -41,6 +41,8 @@ import '../pages/async/streamgame.dart';
 import '../pages/time_picker.dart';
 import '../pages/dio_request.dart';
 import '../pages/dio_future.dart';
+import '../pages/refresh_list.dart';
+import '../pages/news_detail.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -81,7 +83,10 @@ import '../pages/dio_future.dart';
   "/timepicker":(contxt)=> const TimePickerPage(),
   "/diorequest":(contxt)=> const DioRequestPage(),
   "/diofuture":(contxt)=> const DioFuturePage(),
-};
+  "/refreshpage":(contxt)=> const RefreshListPage(),
+  "/newsdetails":(contxt, {arguments})=> NewsDetailsPage(arguments:arguments),
+
+ };
 
  var onGenerateRoute=(RouteSettings settings){
 // 统一处理

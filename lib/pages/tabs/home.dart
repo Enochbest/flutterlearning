@@ -205,6 +205,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   child: const Text('dioFuture请求分类数据'),
                 ),
               ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/refreshpage");
+                  },
+                  child: const Text('列表分页'),
+                ),
+              ),
             ],
           ),
           ListView(
