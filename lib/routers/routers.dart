@@ -43,6 +43,10 @@ import '../pages/dio_request.dart';
 import '../pages/dio_future.dart';
 import '../pages/refresh_list.dart';
 import '../pages/news_detail.dart';
+import '../pages/plugins/inappwebview.dart';
+import '../pages/plugins/pickerimage.dart';
+import '../pages/plugins/videoplay.dart';
+import '../pages/plugins/getdeviceinfo.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -85,7 +89,10 @@ import '../pages/news_detail.dart';
   "/diofuture":(contxt)=> const DioFuturePage(),
   "/refreshpage":(contxt)=> const RefreshListPage(),
   "/newsdetails":(contxt, {arguments})=> NewsDetailsPage(arguments:arguments),
-
+  "/appwebview":(contxt)=> const WebViewPage(),
+  "/pickerimage":(contxt)=> const PickerImagePage(),
+  "/videoplayer":(contxt)=> const VideoPlayPage(),
+  "/getdeviceinfo":(contxt)=> const DeviceInfoPage(),
  };
 
  var onGenerateRoute=(RouteSettings settings){

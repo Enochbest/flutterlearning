@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   Tab(child: Text("异步"),),
                   Tab(child: Text("时间"),),
                   Tab(child: Text("请求"),),
-                  Tab(child: Text("热门"),),
+                  Tab(child: Text("插件"),),
                   Tab(child: Text("视频"),),
                   Tab(child: Text("关注"),),
                   Tab(child: Text("热门"),),
@@ -216,10 +216,39 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ],
           ),
           ListView(
-            children: const [
-              ListTile(
-                title: Text('我是热门列表'),
-              )
+            children:  [
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/appwebview");
+                  },
+                  child: const Text('appwebview插件'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/pickerimage");
+                  },
+                  child: const Text('图片选择,拍照'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/videoplayer");
+                  },
+                  child: const Text('视频播放'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/getdeviceinfo");
+                  },
+                  child: const Text('获取设备信息'),
+                ),
+              ),
             ],
           ),
           ListView(
