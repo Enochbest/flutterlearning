@@ -249,6 +249,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   child: const Text('获取设备信息'),
                 ),
               ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/getinternetstatus");
+                  },
+                  child: const Text('获取网络状态'),
+                ),
+              ),
             ],
           ),
           ListView(

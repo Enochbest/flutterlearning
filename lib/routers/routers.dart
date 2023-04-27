@@ -47,6 +47,7 @@ import '../pages/plugins/inappwebview.dart';
 import '../pages/plugins/pickerimage.dart';
 import '../pages/plugins/videoplay.dart';
 import '../pages/plugins/getdeviceinfo.dart';
+import '../pages/plugins/getinternetstatus.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -93,6 +94,7 @@ import '../pages/plugins/getdeviceinfo.dart';
   "/pickerimage":(contxt)=> const PickerImagePage(),
   "/videoplayer":(contxt)=> const VideoPlayPage(),
   "/getdeviceinfo":(contxt)=> const DeviceInfoPage(),
+  "/getinternetstatus":(contxt)=> const InternetStatusPage(),
  };
 
  var onGenerateRoute=(RouteSettings settings){
