@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
@@ -43,6 +43,9 @@ class _PickerImagePageState extends State<PickerImagePage> {
 
   _pickgallery() async{
     XFile? pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    print(pickedFile?.path);
+    print('---------------------');
+    _uploadImage(pickedFile != null? pickedFile.path : '');
     if (pickedFile != null) {
       setState(() {
         _imageFileDir = pickedFile;
@@ -68,7 +71,18 @@ class _PickerImagePageState extends State<PickerImagePage> {
       });
     }
   }
+  //上传图片
+  _uploadImage( String imagePath) async{
+    var formData = FormData.fromMap({
+      'name':'wendux',
+      'age':25,
+      'file':await MultipartFile.fromFile(imagePath,filename: 'aaa.png')
+    });
+    var response = await Dio().post('https://jdmall.itying.com/imgupload', data: formData);
+    print(response);
+    print('------------');
 
+  }
   @override
   void dispose() {
     // TODO: implement dispose
