@@ -48,6 +48,7 @@ import '../pages/plugins/pickerimage.dart';
 import '../pages/plugins/videoplay.dart';
 import '../pages/plugins/getdeviceinfo.dart';
 import '../pages/plugins/getinternetstatus.dart';
+import '../pages/plugins/scancode.dart';
 
  Map routes = {
   "/":(contxt)=>const Tabs(),
@@ -95,6 +96,7 @@ import '../pages/plugins/getinternetstatus.dart';
   "/videoplayer":(contxt)=> const VideoPlayPage(),
   "/getdeviceinfo":(contxt)=> const DeviceInfoPage(),
   "/getinternetstatus":(contxt)=> const InternetStatusPage(),
+  "/scancode":(contxt)=> const ScanCodePage(),
  };
 
  var onGenerateRoute=(RouteSettings settings){

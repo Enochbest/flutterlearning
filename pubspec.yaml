@@ -46,6 +46,7 @@ dependencies:
   chewie: ^1.4.0
   device_info_plus: ^4.1.2
   connectivity_plus: any
+  barcode_scan2: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

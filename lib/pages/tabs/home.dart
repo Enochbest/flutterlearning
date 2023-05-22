@@ -73,10 +73,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             children: [
               Center(
                 child: ElevatedButton(
+                  child: const Text('TextField组件'),
                   onPressed: () {
                     Navigator.pushNamed(context, "/textfied");
                   },
-                  child: const Text('TextField组件'),
                 ),
               ),
               Center(
@@ -255,6 +255,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     Navigator.pushNamed(context, "/getinternetstatus");
                   },
                   child: const Text('获取网络状态'),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/scancode");
+                  },
+                  child: const Text('二维码扫描'),
                 ),
               ),
             ],
